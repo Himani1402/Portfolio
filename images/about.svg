@@ -1,0 +1,28 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#f9f9f9"/>
+  
+  <!-- Person Illustration -->
+  <circle cx="200" cy="120" r="70" fill="#6c63ff" opacity="0.8"/>
+  <path d="M130 320C130 250 170 220 200 220C230 220 270 250 270 320" fill="#6c63ff" opacity="0.8"/>
+  
+  <!-- Face Features -->
+  <circle cx="175" cy="110" r="10" fill="white"/>
+  <circle cx="225" cy="110" r="10" fill="white"/>
+  <path d="M175 150C175 150 185 170 200 170C215 170 225 150 225 150" stroke="white" stroke-width="5" fill="none"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="100" cy="50" r="20" fill="#f50057" opacity="0.5"/>
+  <circle cx="300" cy="70" r="30" fill="#f50057" opacity="0.3"/>
+  <circle cx="80" cy="350" r="25" fill="#6c63ff" opacity="0.3"/>
+  <circle cx="320" cy="320" r="15" fill="#6c63ff" opacity="0.5"/>
+  
+  <!-- Code/Design Elements -->
+  <rect x="50" y="200" width="60" height="10" rx="5" fill="#333" opacity="0.7"/>
+  <rect x="50" y="220" width="40" height="10" rx="5" fill="#333" opacity="0.7"/>
+  <rect x="50" y="240" width="50" height="10" rx="5" fill="#333" opacity="0.7"/>
+  
+  <rect x="300" y="180" width="50" height="10" rx="5" fill="#333" opacity="0.7"/>
+  <rect x="290" y="200" width="60" height="10" rx="5" fill="#333" opacity="0.7"/>
+  <rect x="310" y="220" width="40" height="10" rx="5" fill="#333" opacity="0.7"/>
+</svg>

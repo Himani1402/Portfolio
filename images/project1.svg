@@ -1,0 +1,22 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f0f0f0"/>
+  
+  <!-- E-commerce Elements -->
+  <rect x="50" y="50" width="300" height="50" rx="5" fill="#6c63ff"/>
+  
+  <!-- Product Grid -->
+  <rect x="50" y="120" width="90" height="120" rx="5" fill="#ddd"/>
+  <rect x="155" y="120" width="90" height="120" rx="5" fill="#ddd"/>
+  <rect x="260" y="120" width="90" height="120" rx="5" fill="#ddd"/>
+  
+  <!-- Cart Icon -->
+  <circle cx="320" cy="75" r="15" fill="white"/>
+  <path d="M313 75 L315 75 L317 83 L325 83 L327 70 L315 70" stroke="#333" stroke-width="2" fill="none"/>
+  <circle cx="318" cy="88" r="3" fill="#333"/>
+  <circle cx="324" cy="88" r="3" fill="#333"/>
+  
+  <!-- Text Elements -->
+  <text x="70" y="80" font-family="Arial" font-size="20" fill="white">E-commerce Website</text>
+  <text x="70" y="105" font-family="Arial" font-size="12" fill="#333">Modern shopping experience</text>
+</svg>

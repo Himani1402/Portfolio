@@ -1,0 +1,26 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f0f0f0"/>
+  
+  <!-- App UI Elements -->
+  <rect x="100" y="50" width="200" height="200" rx="10" fill="white" stroke="#ddd" stroke-width="2"/>
+  
+  <!-- App Header -->
+  <rect x="100" y="50" width="200" height="40" rx="10" fill="#6c63ff"/>
+  <text x="140" y="75" font-family="Arial" font-size="16" fill="white">Task Manager</text>
+  
+  <!-- Task Items -->
+  <rect x="110" y="100" width="180" height="30" rx="5" fill="#f9f9f9" stroke="#eee" stroke-width="1"/>
+  <rect x="110" y="140" width="180" height="30" rx="5" fill="#f9f9f9" stroke="#eee" stroke-width="1"/>
+  <rect x="110" y="180" width="180" height="30" rx="5" fill="#f9f9f9" stroke="#eee" stroke-width="1"/>
+  
+  <!-- Checkboxes -->
+  <rect x="120" y="110" width="10" height="10" rx="2" fill="white" stroke="#6c63ff" stroke-width="2"/>
+  <rect x="120" y="150" width="10" height="10" rx="2" fill="#6c63ff"/>
+  <rect x="120" y="190" width="10" height="10" rx="2" fill="white" stroke="#6c63ff" stroke-width="2"/>
+  
+  <!-- Task Text -->
+  <text x="140" y="120" font-family="Arial" font-size="12" fill="#333">Complete project design</text>
+  <text x="140" y="160" font-family="Arial" font-size="12" fill="#777">Review code changes</text>
+  <text x="140" y="200" font-family="Arial" font-size="12" fill="#333">Deploy application</text>
+</svg>
