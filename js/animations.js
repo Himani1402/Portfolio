@@ -21,208 +21,79 @@ document.addEventListener('DOMContentLoaded', function () {
     initEnhancedEffects();
 });
 
-// Function to create background animations
+// Function to create background animations (simplified)
 function createBackgroundAnimations() {
-    // Create floating particles
-    createFloatingParticles();
-    
-    // Create geometric shapes
-    createGeometricShapes();
-    
-    // Create gradient orbs
-    createGradientOrbs();
-    
-    // Create morphing blobs
-    createMorphingBlobs();
-    
-    // Add section backgrounds
-    addSectionBackgrounds();
+    // Removed complex animations that were causing glitches
+    // Keeping only subtle effects
 }
 
-// Create floating particles
-function createFloatingParticles() {
-    const particleContainer = document.createElement('div');
-    particleContainer.className = 'floating-particles';
-    
-    for (let i = 0; i < 20; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 15 + 's';
-        particle.style.animationDuration = (15 + Math.random() * 10) + 's';
-        particleContainer.appendChild(particle);
-    }
-    
-    document.body.appendChild(particleContainer);
-}
 
-// Create geometric shapes
-function createGeometricShapes() {
-    const shapesContainer = document.createElement('div');
-    shapesContainer.className = 'geometric-shapes';
-    
-    const shapeTypes = ['circle', 'square', 'triangle'];
-    
-    for (let i = 0; i < 15; i++) {
-        const shape = document.createElement('div');
-        const shapeType = shapeTypes[Math.floor(Math.random() * shapeTypes.length)];
-        shape.className = `shape ${shapeType}`;
-        
-        if (shapeType !== 'triangle') {
-            shape.style.width = (20 + Math.random() * 40) + 'px';
-            shape.style.height = (20 + Math.random() * 40) + 'px';
-        }
-        
-        shape.style.left = Math.random() * 100 + '%';
-        shape.style.top = Math.random() * 100 + '%';
-        shape.style.animationDelay = Math.random() * 20 + 's';
-        shape.style.animationDuration = (15 + Math.random() * 10) + 's';
-        
-        shapesContainer.appendChild(shape);
-    }
-    
-    document.body.appendChild(shapesContainer);
-}
-
-// Create gradient orbs
-function createGradientOrbs() {
-    const orbsContainer = document.createElement('div');
-    orbsContainer.className = 'gradient-orbs';
-    
-    for (let i = 0; i < 8; i++) {
-        const orb = document.createElement('div');
-        orb.className = 'orb';
-        orb.style.width = (100 + Math.random() * 200) + 'px';
-        orb.style.height = (100 + Math.random() * 200) + 'px';
-        orb.style.left = Math.random() * 100 + '%';
-        orb.style.top = Math.random() * 100 + '%';
-        orb.style.animationDelay = Math.random() * 25 + 's';
-        orb.style.animationDuration = (20 + Math.random() * 10) + 's';
-        
-        orbsContainer.appendChild(orb);
-    }
-    
-    document.body.appendChild(orbsContainer);
-}
-
-// Create morphing blobs
-function createMorphingBlobs() {
-    const blobsContainer = document.createElement('div');
-    blobsContainer.className = 'morphing-blobs';
-    
-    for (let i = 0; i < 5; i++) {
-        const blob = document.createElement('div');
-        blob.className = 'blob';
-        blob.style.left = Math.random() * 100 + '%';
-        blob.style.top = Math.random() * 100 + '%';
-        blob.style.animationDelay = Math.random() * 20 + 's';
-        blob.style.animationDuration = (15 + Math.random() * 10) + 's';
-        
-        blobsContainer.appendChild(blob);
-    }
-    
-    document.body.appendChild(blobsContainer);
-}
-
-// Add section backgrounds
-function addSectionBackgrounds() {
-    const sections = document.querySelectorAll('.section');
-    sections.forEach((section, index) => {
-        // Add wave background
-        const waveBg = document.createElement('div');
-        waveBg.className = 'wave-bg';
-        waveBg.style.animationDelay = (index * 2) + 's';
-        section.appendChild(waveBg);
-        
-        // Add grid background for alternate sections
-        if (index % 2 === 0) {
-            const gridBg = document.createElement('div');
-            gridBg.className = 'grid-bg';
-            gridBg.style.animationDelay = (index * 1.5) + 's';
-            section.appendChild(gridBg);
-        }
-    });
-}
-
-// Function to add animation classes to elements
+// Function to add simple animation classes to elements
 function addAnimationClasses() {
-    // Home section animations
+    // Simple home section animations
     document.querySelectorAll('.home-section .social-icon').forEach((icon, index) => {
-        icon.classList.add('animate', 'fade-in', `delay-${index + 1}`, 'breathe');
+        icon.classList.add('animate', 'fade-in', `delay-${index + 1}`);
     });
     
-    // Skills section animations
+    // Simple skills section animations
     const skillItems = document.querySelectorAll('.skill-dropdown');
     skillItems.forEach((item, index) => {
-        item.classList.add('scroll-animation', 'animated-card');
+        item.classList.add('scroll-animation');
         item.style.transitionDelay = `${index * 0.1}s`;
     });
     
-    // Projects section animations
+    // Simple projects section animations
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach((card, index) => {
-        card.classList.add('scroll-animation', 'animated-card');
+        card.classList.add('scroll-animation');
         card.style.transitionDelay = `${index * 0.1}s`;
     });
     
-    // Resume section animations
+    // Simple resume section animations
     const resumeItems = document.querySelectorAll('.resume-item');
     resumeItems.forEach((item, index) => {
-        item.classList.add('scroll-animation', 'animated-card');
+        item.classList.add('scroll-animation');
         item.style.transitionDelay = `${index * 0.1}s`;
     });
 }
 
-// Function to initialize enhanced effects
+// Function to initialize simplified effects
 function initEnhancedEffects() {
-    // Add glow effect to section titles
+    // Add subtle glow effect to titles only
     const sectionTitles = document.querySelectorAll('.section-title');
     sectionTitles.forEach(title => {
         title.classList.add('text-glow');
     });
     
-    // Add glow effect to main title
-    const mainTitle = document.querySelector('.title');
-    if (mainTitle) {
-        mainTitle.classList.add('text-glow');
-    }
-    
-    // Add enhanced button effects
+    // Simple button effects
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach(button => {
         button.addEventListener('click', createRippleEffect);
-        button.classList.add('glow-effect');
     });
     
-    // Enhanced hover effects for project cards
+    // Simple hover effects for project cards
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.classList.add('glow-effect', 'breathe');
+            this.classList.add('animated-card');
         });
         
         card.addEventListener('mouseleave', function() {
-            this.classList.remove('glow-effect', 'breathe');
+            this.classList.remove('animated-card');
         });
     });
     
-    // Enhanced hover effects for skill dropdowns
+    // Simple hover effects for skill dropdowns
     const skillDropdowns = document.querySelectorAll('.skill-dropdown');
     skillDropdowns.forEach(dropdown => {
         dropdown.addEventListener('mouseenter', function() {
-            this.classList.add('glow-effect', 'pulse');
+            this.style.transform = 'translateY(-3px)';
         });
         
         dropdown.addEventListener('mouseleave', function() {
-            this.classList.remove('glow-effect', 'pulse');
+            this.style.transform = 'translateY(0)';
         });
     });
-    
-    // Add breathing effect to theme toggle
-    const themeToggle = document.querySelector('.theme-toggle');
-    if (themeToggle) {
-        themeToggle.classList.add('breathe', 'glow-effect');
-    }
 }
 
 // Create ripple effect for buttons
@@ -304,32 +175,10 @@ function animateResumeItems() {
     });
 }
 
-// Function to initialize parallax effect
+// Function to initialize simplified parallax effect
 function initParallax() {
-    const parallaxElements = document.querySelectorAll('.hero-image, .about-image, .floating-particles, .geometric-shapes, .gradient-orbs');
-    
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        
-        parallaxElements.forEach(element => {
-            const speed = element.dataset.speed || 0.5;
-            element.style.transform = `translateY(${scrolled * speed}px)`;
-        });
-        
-        // Add subtle movement to background elements
-        const orbs = document.querySelectorAll('.orb');
-        orbs.forEach((orb, index) => {
-            const speed = 0.1 + (index * 0.02);
-            orb.style.transform = `translate(${Math.sin(scrolled * 0.001) * 20}px, ${Math.cos(scrolled * 0.001) * 15}px)`;
-        });
-        
-        // Animate blobs based on scroll
-        const blobs = document.querySelectorAll('.blob');
-        blobs.forEach((blob, index) => {
-            const rotation = scrolled * 0.1 + (index * 45);
-            blob.style.transform = `rotate(${rotation}deg) scale(${1 + Math.sin(scrolled * 0.001) * 0.1})`;
-        });
-    });
+    // Removed complex parallax effects that were causing glitches
+    // Keeping basic functionality without performance issues
 }
 
 // Function to initialize smooth scrolling
