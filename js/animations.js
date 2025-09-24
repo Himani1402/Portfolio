@@ -1,6 +1,10 @@
-// Animations JavaScript File
+// Enhanced Animations JavaScript File
 
-document.addEventListener('DOMContentLoaded', function() {
+// Initialize all animations when DOM is loaded
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize background animations
+    createBackgroundAnimations();
+    
     // Add animation classes to elements
     addAnimationClasses();
     
@@ -12,42 +16,402 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize smooth scrolling
     initSmoothScroll();
+    
+    // Initialize enhanced effects
+    initEnhancedEffects();
 });
+
+// Function to create background animations
+function createBackgroundAnimations() {
+    // Create floating particles
+    createFloatingParticles();
+    
+    // Create geometric shapes
+    createGeometricShapes();
+    
+    // Create gradient orbs
+    createGradientOrbs();
+    
+    // Create morphing blobs
+    createMorphingBlobs();
+    
+    // Add section backgrounds
+    addSectionBackgrounds();
+}
+
+// Create floating particles
+function createFloatingParticles() {
+    const particleContainer = document.createElement('div');
+    particleContainer.className = 'floating-particles';
+    
+    for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 15 + 's';
+        particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+        particleContainer.appendChild(particle);
+    }
+    
+    document.body.appendChild(particleContainer);
+}
+
+// Create geometric shapes
+function createGeometricShapes() {
+    const shapesContainer = document.createElement('div');
+    shapesContainer.className = 'geometric-shapes';
+    
+    const shapeTypes = ['circle', 'square', 'triangle'];
+    
+    for (let i = 0; i < 15; i++) {
+        const shape = document.createElement('div');
+        const shapeType = shapeTypes[Math.floor(Math.random() * shapeTypes.length)];
+        shape.className = `shape ${shapeType}`;
+        
+        if (shapeType !== 'triangle') {
+            shape.style.width = (20 + Math.random() * 40) + 'px';
+            shape.style.height = (20 + Math.random() * 40) + 'px';
+        }
+        
+        shape.style.left = Math.random() * 100 + '%';
+        shape.style.top = Math.random() * 100 + '%';
+        shape.style.animationDelay = Math.random() * 20 + 's';
+        shape.style.animationDuration = (15 + Math.random() * 10) + 's';
+        
+        shapesContainer.appendChild(shape);
+    }
+    
+    document.body.appendChild(shapesContainer);
+}
+
+// Create gradient orbs
+function createGradientOrbs() {
+    const orbsContainer = document.createElement('div');
+    orbsContainer.className = 'gradient-orbs';
+    
+    for (let i = 0; i < 8; i++) {
+        const orb = document.createElement('div');
+        orb.className = 'orb';
+        orb.style.width = (100 + Math.random() * 200) + 'px';
+        orb.style.height = (100 + Math.random() * 200) + 'px';
+        orb.style.left = Math.random() * 100 + '%';
+        orb.style.top = Math.random() * 100 + '%';
+        orb.style.animationDelay = Math.random() * 25 + 's';
+        orb.style.animationDuration = (20 + Math.random() * 10) + 's';
+        
+        orbsContainer.appendChild(orb);
+    }
+    
+    document.body.appendChild(orbsContainer);
+}
+
+// Create morphing blobs
+function createMorphingBlobs() {
+    const blobsContainer = document.createElement('div');
+    blobsContainer.className = 'morphing-blobs';
+    
+    for (let i = 0; i < 5; i++) {
+        const blob = document.createElement('div');
+        blob.className = 'blob';
+        blob.style.left = Math.random() * 100 + '%';
+        blob.style.top = Math.random() * 100 + '%';
+        blob.style.animationDelay = Math.random() * 20 + 's';
+        blob.style.animationDuration = (15 + Math.random() * 10) + 's';
+        
+        blobsContainer.appendChild(blob);
+    }
+    
+    document.body.appendChild(blobsContainer);
+}
+
+// Add section backgrounds
+function addSectionBackgrounds() {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach((section, index) => {
+        // Add wave background
+        const waveBg = document.createElement('div');
+        waveBg.className = 'wave-bg';
+        waveBg.style.animationDelay = (index * 2) + 's';
+        section.appendChild(waveBg);
+        
+        // Add grid background for alternate sections
+        if (index % 2 === 0) {
+            const gridBg = document.createElement('div');
+            gridBg.className = 'grid-bg';
+            gridBg.style.animationDelay = (index * 1.5) + 's';
+            section.appendChild(gridBg);
+        }
+    });
+}
 
 // Function to add animation classes to elements
 function addAnimationClasses() {
     // Home section animations
     document.querySelectorAll('.home-section .social-icon').forEach((icon, index) => {
-        icon.classList.add('animate', 'fade-in', `delay-${index + 1}`);
-    });
-    
-    // About section animations
-    const aboutElements = document.querySelectorAll('.about-section h2, .about-section .about-image, .about-section h3, .about-section p, .about-section .personal-info, .about-section .btn');
-    aboutElements.forEach(element => {
-        element.classList.add('scroll-animation');
+        icon.classList.add('animate', 'fade-in', `delay-${index + 1}`, 'breathe');
     });
     
     // Skills section animations
-    const skillItems = document.querySelectorAll('.skill-item');
+    const skillItems = document.querySelectorAll('.skill-dropdown');
     skillItems.forEach((item, index) => {
-        item.classList.add('scroll-animation');
+        item.classList.add('scroll-animation', 'animated-card');
         item.style.transitionDelay = `${index * 0.1}s`;
     });
     
     // Projects section animations
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach((card, index) => {
-        card.classList.add('scroll-animation');
+        card.classList.add('scroll-animation', 'animated-card');
         card.style.transitionDelay = `${index * 0.1}s`;
     });
     
-    // Contact section animations
-    const contactElements = document.querySelectorAll('.contact-section h2, .contact-item, .contact-form');
-    contactElements.forEach((element, index) => {
-        element.classList.add('scroll-animation');
-        element.style.transitionDelay = `${index * 0.1}s`;
+    // Resume section animations
+    const resumeItems = document.querySelectorAll('.resume-item');
+    resumeItems.forEach((item, index) => {
+        item.classList.add('scroll-animation', 'animated-card');
+        item.style.transitionDelay = `${index * 0.1}s`;
     });
 }
+
+// Function to initialize enhanced effects
+function initEnhancedEffects() {
+    // Add glow effect to section titles
+    const sectionTitles = document.querySelectorAll('.section-title');
+    sectionTitles.forEach(title => {
+        title.classList.add('text-glow');
+    });
+    
+    // Add glow effect to main title
+    const mainTitle = document.querySelector('.title');
+    if (mainTitle) {
+        mainTitle.classList.add('text-glow');
+    }
+    
+    // Add enhanced button effects
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', createRippleEffect);
+        button.classList.add('glow-effect');
+    });
+    
+    // Enhanced hover effects for project cards
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.classList.add('glow-effect', 'breathe');
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.classList.remove('glow-effect', 'breathe');
+        });
+    });
+    
+    // Enhanced hover effects for skill dropdowns
+    const skillDropdowns = document.querySelectorAll('.skill-dropdown');
+    skillDropdowns.forEach(dropdown => {
+        dropdown.addEventListener('mouseenter', function() {
+            this.classList.add('glow-effect', 'pulse');
+        });
+        
+        dropdown.addEventListener('mouseleave', function() {
+            this.classList.remove('glow-effect', 'pulse');
+        });
+    });
+    
+    // Add breathing effect to theme toggle
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (themeToggle) {
+        themeToggle.classList.add('breathe', 'glow-effect');
+    }
+}
+
+// Create ripple effect for buttons
+function createRippleEffect(e) {
+    const ripple = document.createElement('span');
+    const rect = this.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    const x = e.clientX - rect.left - size / 2;
+    const y = e.clientY - rect.top - size / 2;
+    
+    ripple.style.cssText = `
+        position: absolute;
+        width: ${size}px;
+        height: ${size}px;
+        left: ${x}px;
+        top: ${y}px;
+        background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 70%);
+        border-radius: 50%;
+        transform: scale(0);
+        animation: rippleEffect 0.6s ease-out;
+        pointer-events: none;
+        z-index: 1;
+    `;
+    
+    this.style.position = 'relative';
+    this.style.overflow = 'hidden';
+    this.appendChild(ripple);
+    
+    setTimeout(() => {
+        ripple.remove();
+    }, 600);
+}
+
+// Function to initialize scroll reveal animations
+function initScrollReveal() {
+    const sections = document.querySelectorAll('section');
+    const resumeItems = document.querySelectorAll('.resume-item');
+    
+    const revealSection = () => {
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (sectionTop < windowHeight - 150) {
+                section.classList.add('active');
+                
+                // If this is the resume section, animate its items
+                if (section.classList.contains('resume-section')) {
+                    animateResumeItems();
+                }
+            }
+        });
+    };
+    
+    window.addEventListener('scroll', revealSection);
+    window.addEventListener('load', revealSection);
+    
+    // Separate observer for resume items
+    const itemObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    
+    resumeItems.forEach(item => {
+        itemObserver.observe(item);
+    });
+}
+
+// Animate resume items with staggered delay
+function animateResumeItems() {
+    const items = document.querySelectorAll('.resume-item');
+    items.forEach((item, index) => {
+        setTimeout(() => {
+            item.classList.add('animate');
+        }, 200 * index);
+    });
+}
+
+// Function to initialize parallax effect
+function initParallax() {
+    const parallaxElements = document.querySelectorAll('.hero-image, .about-image, .floating-particles, .geometric-shapes, .gradient-orbs');
+    
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        
+        parallaxElements.forEach(element => {
+            const speed = element.dataset.speed || 0.5;
+            element.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+        
+        // Add subtle movement to background elements
+        const orbs = document.querySelectorAll('.orb');
+        orbs.forEach((orb, index) => {
+            const speed = 0.1 + (index * 0.02);
+            orb.style.transform = `translate(${Math.sin(scrolled * 0.001) * 20}px, ${Math.cos(scrolled * 0.001) * 15}px)`;
+        });
+        
+        // Animate blobs based on scroll
+        const blobs = document.querySelectorAll('.blob');
+        blobs.forEach((blob, index) => {
+            const rotation = scrolled * 0.1 + (index * 45);
+            blob.style.transform = `rotate(${rotation}deg) scale(${1 + Math.sin(scrolled * 0.001) * 0.1})`;
+        });
+    });
+}
+
+// Function to initialize smooth scrolling
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                // Add pulse effect to clicked link
+                this.classList.add('pulse');
+                setTimeout(() => this.classList.remove('pulse'), 300);
+                
+                // Smooth scroll to target
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
+// Function to animate skill bars on scroll
+function animateSkillBars() {
+    const skillBars = document.querySelectorAll('.progress');
+    
+    skillBars.forEach(bar => {
+        const percentage = bar.style.width;
+        bar.style.width = '0';
+        
+        setTimeout(() => {
+            bar.style.width = percentage;
+            bar.style.transition = 'width 1.5s ease-in-out';
+        }, 200);
+    });
+}
+
+// Call additional animation functions when page is loaded
+window.addEventListener('load', function() {
+    // Animate skill bars when skills section is in view
+    const skillsSection = document.querySelector('.skills-section');
+    
+    if (skillsSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSkillBars();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(skillsSection);
+    }
+    
+    // Add scroll indicator to home section
+    const homeSection = document.querySelector('.home-section');
+    if (homeSection) {
+        const scrollIndicator = document.createElement('div');
+        scrollIndicator.className = 'scroll-indicator';
+        homeSection.appendChild(scrollIndicator);
+    }
+});
+
+// Add CSS for ripple effect
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes rippleEffect {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
 
 // Function to initialize scroll reveal animations
 function initScrollReveal() {

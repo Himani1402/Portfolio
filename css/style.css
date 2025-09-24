@@ -185,7 +185,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 25px 0;
+    padding: 25px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -199,7 +199,7 @@ img {
 .navbar.scrolled {
     background: linear-gradient(135deg, rgba(15, 15, 35, 0.95), rgba(26, 26, 46, 0.95));
     box-shadow: 0 8px 32px rgba(108, 99, 255, 0.2);
-    padding: 20px 0;
+    padding: 20px 60px;
     border-bottom: 1px solid rgba(108, 99, 255, 0.3);
 }
 
@@ -282,7 +282,7 @@ img {
 
 /* Section Styles */
 .section {
-    padding: 60px 0;
+    padding: 80px 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -322,7 +322,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 180px 40px 60px;
+    padding: 160px 60px 80px;
     text-align: center;
     min-height: 100vh;
 }
@@ -330,6 +330,7 @@ img {
 .content {
     max-width: 900px;
     padding: 0 20px;
+    margin-bottom: 40px;
 }
 
 .title {
@@ -362,11 +363,11 @@ img {
 }
 
 .description {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     color: var(--light-text-color);
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     line-height: 1.8;
-    max-width: 750px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     font-weight: 400;
@@ -868,12 +869,12 @@ html {
 
 /* Resume Section */
 .resume-section {
-    background-color: var(--section-bg-color);
+    /* Removed background for cleaner look */
 }
 
 /* Extracurricular Section */
 .extracurricular-section {
-    background-color: var(--background-color);
+    /* Removed background for cleaner look */
 }
 
 .extracurricular-container {
@@ -1188,21 +1189,22 @@ textarea {
 
 /* Footer */
 .footer {
-    background-color: var(--card-bg-color);
-    padding: 50px 0 20px;
+    padding: 40px 0 20px;
+    margin-top: 40px;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    gap: 30px;
 }
 
 .footer-logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-color);
 }
 
 .footer-social {
@@ -1212,10 +1214,10 @@ textarea {
 
 .footer-bottom {
     text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+    border-top: 1px solid rgba(108, 99, 255, 0.2);
     color: var(--light-text-color);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 /* Responsive Styles */
@@ -1255,7 +1257,7 @@ textarea {
 
 @media screen and (max-width: 768px) {
     .navbar {
-        padding: 15px 20px;
+        padding: 15px 30px;
     }
 
     .logo {
